@@ -48,4 +48,8 @@
 (defn solve-part-2 [input]
     (count (filter overlap input)))
 
-(def input (parse-input (read-input "input.txt")))
+(defn -main []
+    (let [input (parse-input (read-input "input.txt"))]
+        (do
+          (println (solve input))
+          (println (solve-part-2 input)))))
