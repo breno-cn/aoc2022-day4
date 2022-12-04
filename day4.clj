@@ -4,8 +4,8 @@
 
 (defn read-input [filepath]
     (-> filepath
-          (slurp)
-          (str/split #"\n")))
+        (slurp)
+        (str/split #"\n")))
 
 (defn parse-range [range]
     (let [split (str/split range #"-")]
@@ -25,11 +25,11 @@
           f2 (nth second-range 1)]
           (or 
             (and
-                (<= c1 c2)
-                (>= f1 f2))
+              (<= c1 c2)
+              (>= f1 f2))
             (and
-                (>= c1 c2)
-                (<= f1 f2)))))
+              (>= c1 c2)
+              (<= f1 f2)))))
 
 (defn overlap [ranges]
     (let [first-range (ranges 0)
